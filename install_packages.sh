@@ -6,8 +6,6 @@ export DEBIAN_FRONTEND=noninteractive
 # Install security updates:
 apt-get update
 apt-get -y upgrade
-# Upgrade pip
-pip install --upgrade pip
 # Cleanup
 apt-get clean
 rm -rf /var/lib/apt/lists/*
