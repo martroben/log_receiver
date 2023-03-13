@@ -16,11 +16,6 @@ cd log_receiver
 sudo docker build --rm -t log_receiver .
 ```
 
-Optional: remove build stage
-```Shell
-sudo docker image prune --filter label=stage=log_receiver_builder -f
-```
-
 ##### 3. Create a Docker volume for logs
 ```Shell
 sudo docker volume create --label logs

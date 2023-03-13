@@ -56,4 +56,8 @@ if __name__ == "__main__":
     log_receiver_ip = os.environ.get("LOG_RECEIVER_IP", "188.0.0.4")
     log_receiver_port = int(os.environ.get("LOG_RECEIVER_PORT", 7001))
     with socketserver.UDPServer((log_receiver_ip, log_receiver_port), UDPHandler) as server:
+        # Welcome message for diagnostics
+        welcome_message = f"Log receiver: ip {log_receiver_ip} port {log_receiver_port}"
+        print(welcome_message)
+        LogSaver().save(welcome_message)
         server.serve_forever()
