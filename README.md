@@ -59,6 +59,7 @@ sudo docker run \
     --log-opt syslog-format=rfc3164 \
     my_app_container
 ```
+See [get_logger.py](get_logger.py) for an example of how to set up logging on these.
 
 ##### 7. Access the logs
 ```Shell
