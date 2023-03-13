@@ -7,8 +7,10 @@ import re
 import socketserver
 
 
-# Helper function to create a logger with correct formatting for the receiver
 def get_logger(name: str, level: str, indicator: str) -> logging.Logger:
+    """
+    Helper function to create a logger with correct formatting for the receiver
+    """
     logger = logging.getLogger(name)
     logger.setLevel(level)
     handler = logging.StreamHandler()                       # Direct logs to stdout
