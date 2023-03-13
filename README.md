@@ -62,5 +62,5 @@ sudo docker run \
     --mount source=logs,target=/log \
     --rm \
     -it \
-    alpine bash
+    alpine sh
 ```
